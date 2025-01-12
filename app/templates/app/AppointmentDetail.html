@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+      <div class="user-entry">
+          <h2><a href="">{{appointment.user}}</a></h2>
+
+          <p>{{appointment.address }}</p>
+            <img src ="{{appointment.profile_picture}}">
+
+
+      </div>
+      <a href="{% url 'AppointmentUpdate' appointment.pk  %}">+ Edit Appointment</a>
+      <a href="{% url 'AppointmentDelete' appointment.pk  %}">- Delete Appointment</a>
+{% endblock content %}
